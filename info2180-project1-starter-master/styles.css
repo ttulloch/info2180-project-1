@@ -8,7 +8,7 @@
     --white: white ;
     --navigationLink: slategrey;
     --linkhover: purple;
-    --overviewhero: white;
+    --overview-hero: white;
     --learnAbout: white;
     --covidbackground: slategrey;
     --c19learnmorelink: purple;
@@ -31,7 +31,8 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 900px;
+    padding-right:180px;
     width: 100%;
 }
 
@@ -41,42 +42,46 @@ header .container{
     flex-direction: row;
     align-items: center;
     text-align: center;
+
    
 }
 
 header{
-    display: flex;
     background-color: white;
+    display: flex;
+    
 }
 
 header h1{
-    padding: 10px;
-    font-size: 18px;
-    padding-right: 90px;
+    padding: 20px;
+    padding-right: 225px;
+    font-size: 16px;
     float: left;
 }
-li a:hover {
+header a:hover {
     color: var(--linkhover);
+    color: slategray
 }
 
-li a {
-    padding: 20px;
+header a {
+    padding: 15px;
+    color: var(--navigationLink);
+    font-size: var(--defaultfonts);
+    font-weight: bold;
     float: right;
     text-decoration: none;
-    color: var(--navigationLink);
-    font-weight: bold;
-    font-size: var(--defaultfonts);
 }
 
 
-ul {
+header ul {
+    justify-content: flex-end;
     padding: 0px;
     margin: 0px;
     overflow: hidden;
-    list-style: none;
-    background-color: white;
+    list-style-type: none;
     display: flex;
-    justify-content: flex-end;
+    background-color: white;
+    
 }
 
 
@@ -84,18 +89,23 @@ ul {
     background-color: var(--overviewhero);
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left ;
     align-items: center;
+    justify-content: center;
     padding-left: 20px;
+    box-shadow: inset;
+    background-color: slategray;
 }
 
 .overview-hero-image img{
     align-items: center;
-    width: 200px;
-    height: 200px;
-    padding: 10px;
+    width: 180px;
+    height: 180px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: inset;
 }
 
 .overview-hero-text{
@@ -108,7 +118,7 @@ ul {
     display: grid;
     padding: 10px;
     width: auto;
-    height: 300px;
+    height: 250px;
     margin-top: 10px;
 }
 
@@ -181,15 +191,6 @@ ul {
     padding: 1px 225px 1px 225px;
 }
 
-form button{
-    background-color: purple;
-    color: white;
-    outline-style: none;
-    border-style: none;
-    height: 50px;
-    width: 145px;
-    border-radius: 5px;
-}
 
 form{
     display: flex;
@@ -211,6 +212,16 @@ form div{
     padding: 5px 5px 5px 0px;
 }
 
+form button{
+    background-color: purple;
+    color: white;
+    outline-style: none;
+    border-style: none;
+    height: 50px;
+    width: 145px;
+    border-radius: 5px;
+}
+
 
 footer{
     background-color: slategrey;
@@ -218,7 +229,13 @@ footer{
     color: white;
 }
 
-
+.cards {
+    padding: 0px 20px 20px 20px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-gap: 30px;
+    
+}
 
 .card img{
     display: block;
@@ -226,11 +243,13 @@ footer{
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 30%
+    
 }
 
 .card-body h3{
     color: mediumspringgreen;
-    font-size: 21px;
+    font-size: 19px;
     padding: 20px;
 }
 
@@ -248,12 +267,6 @@ footer{
 
 .learn-about .container h2{
     color: mediumspringgreen;
-    padding: 20px;
+    padding: 15px;
 }
 
-.cards {
-    grid-template-columns: 330px 330px 330px;
-    display: grid;
-    grid-gap: 30px;
-    padding: 0px 30px 30px 20px;
-}
